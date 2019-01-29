@@ -2,7 +2,7 @@
 *This is the skeleton or the structure of the button*
 *Basically the **HTML** of this challenge*
 
-### I using font awesome icons on this
+*I using font awesome icons on this*
 
 ```
 <body>
@@ -46,7 +46,7 @@
 }
 ```
 
-### Let's not display the input checkbox
+#### Let's not display the input checkbox
 ```
 .hidden {
 	display: none;
@@ -54,7 +54,8 @@
 ```
 
 ### Now let's start to style our button
-### Because this is an input element *(inline)* we need to manually style and have it as a  block element. Those are the first 3 lines. We want to position it so set to *absolute.* set initial width and height for the block. align using top and left attributes. set borders for styling. align to center. set font size and line height for styling. set color and set cursor to pointer for the mouse to recognize as an element that we can interact with. Lastly, set transition for the animation. Upon hover we will set the background color to something else to indicate interaction.
+*Because this is an input element **(inline)** we need to manually style and have it as a  block element. Those are the first 3 lines. We want to position it so set to **absolute.**
+*Set initial width and height for the block. align using top and left attributes. set borders for styling. align to center. set font size and line height for styling. set color and set cursor to pointer for the mouse to recognize as an element that we can interact with. Lastly, set transition for the animation. Upon hover we will set the background color to something else to indicate interaction.*
 ```
 .button {
 	box-sizing: border-box;
@@ -82,7 +83,7 @@
 }
 ```
 
-### Now to position our check icon and set the opacity.
+#### Now to position our check icon and set the opacity.
 ```
 .checked {
 	position:absolute;
@@ -94,7 +95,7 @@
 }
 ```
 
-### Now style and position our svg circle
+#### Now style and position our svg circle
 ```
 .circle {
 	position: absolute;
@@ -140,11 +141,11 @@
 }
 ```
 
-### Now let's set first the keyframe animation that I will be using on these elements.
+#### Now let's set first the keyframe animation that I will be using on these elements.
 
 *To make the button oval shape into a circle*
 
-### *stroke-dashoffset* property in CSS defines the location along an SVG path where the dash of a stroke will begin. The higher the number, the further along the path will begin.
+#### *stroke-dashoffset* property in CSS defines the location along an SVG path where the dash of a stroke will begin. The higher the number, the further along the path will begin.
 ```
 @keyframes circle {
 	0% {
@@ -164,7 +165,7 @@
 }
 ```
 
-### Now set the fill animation keyframes
+#### Now set the fill animation keyframes
 ```
 @keyframes fill {
 	0% {
@@ -177,7 +178,7 @@
 }
 ```
 
-### Now set the check animation to end
+#### Now set the check animation to end
 
 *This is a simple one as the animation will just show the check at the end of the animation*
 ```
@@ -191,7 +192,7 @@
 	}
 ```
 
-### Now onto using the animation on the elements and putting it all together
+#### Now onto using the animation on the elements and putting it all together
 
 **The key thing here is the use of the input element because that allows us to animate via CSS. Basically when user click on the checkbox then animation would start.**
 
