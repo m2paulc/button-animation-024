@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+body {
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: linear-gradient(to right bottom, #9C27B0, #42A5F5);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  width: 260px;
+  height: 60px;
+  top: 170px;
+  left: 70px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.button:hover {
+  background-color: #42A5F5;
+}
+.button .checked {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  color: royalblue;
+  z-index: 2;
+  opacity: 0;
+}
+
+.circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 170px;
+  left: 170px;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-dasharray: 183 183;
+  stroke-dashoffset: 183;
+  fill: none;
+  pointer-events: none;
+  z-index: 2;
+  transform: rotate(-90deg);
+}
+
+input:checked ~ .button {
+  animation: button 0.5s ease both, fill 0.5s ease-out 1.5s forwards;
+}
+input:checked ~ .button .checked {
+  animation: check 0.5s ease-out 1.2s both;
+}
+input:checked ~ .button ~ .circle {
+  animation: circle 2s ease-out 0.5s both;
+}
+
+@keyframes button {
+  0% {
+    width: 260px;
+    left: 70px;
+    border-color: #fff;
+    color: #fff;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    width: 60px;
+    left: 170px;
+    border-color: transparent;
+    background: transparent;
+    color: transparent;
+  }
+}
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 183;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 183;
+    transform: rotate(-90deg) scale(1);
+    opacity: 1;
+  }
+  90%, 100% {
+    stroke-dasharray: 500 500;
+    transform: rotate(-90deg) scale(2);
+    opacity: 0;
+  }
+}
+@keyframes fill {
+  0% {
+    background: transparent;
+    border-color: #fff;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

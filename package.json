@@ -1,0 +1,17 @@
+{
+  "name": "css-button",
+  "version": "1.0.0",
+  "description": "css button animation",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch scss/style.scss css/style.css"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "paulc",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
