@@ -12,7 +12,7 @@
   "author": "paulc",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^8.0.0"
+
   },
   "devDependencies": {
     "yargs-parser": "^13.1.2"
